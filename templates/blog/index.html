@@ -1,0 +1,55 @@
+{% extends 'blog/base.html' %} {% load static %} 
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/css/style.css' %}" />
+{% endblock css_files %} 
+{% block title %} Welcome Page {% endblock title %} 
+{% block body %}
+
+<div class="container">
+  <div class="text-box" style="height: 444px">
+    <h2>We Are</h2>
+    <h1>Himalayan Bloggers</h1>
+    <h3>Blog With Us</h3>
+
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #f2f2f2;
+      "
+    >
+      <div style="margin: 10px; background-color: aqua">
+        <a href="{% url 'blog' %}" style="text-decoration: none; color: #000"
+          >Explore Us</a
+        >
+      </div>
+      <div style="margin: 10px; background-color: aqua">
+        <a href="{% url 'contact' %}" style="text-decoration: none; color: #000"
+          >Connect With Us&#x21fe;</a
+        >
+      </div>
+    </div>
+
+    <span
+      >You can Explore more about us as well as <br />
+      About Our Members</span
+    >
+  </div>
+  <div class="social-icons">
+    <a href="https://fb.com" target="_blank"
+      ><img src="{% static 'blog/css/fb.png' %}" alt="" class="" />Facebook</a
+    >
+    <a href="https://instagram.com" target="_blank"
+      ><img src="{% static 'blog/css/insta.png' %}" alt="" />Instagram</a
+    >
+    <a href="https://github.com" target="_blank"
+      ><img src="{% static 'blog/css/git.png' %}" alt="" />Github</a
+    >
+   
+  </div>
+</div>
+{% endblock body %}

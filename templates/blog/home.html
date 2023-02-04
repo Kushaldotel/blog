@@ -1,0 +1,102 @@
+{% extends 'blog/base.html' %}
+ {% load static %} 
+ {% block title %} About us {% endblock title %}
+
+{%block body %} 
+<div style="text-align: center">
+  <h1 style="font-size: 3em; font-weight: bold; margin-bottom: 20px">
+    About Us
+  </h1>
+  <div style="display: flex; justify-content: space-around; flex-wrap: wrap">
+    <div
+      style="
+        text-align: center;
+        flex: 1;
+        margin: 20px;
+        border: 1px solid lightgray;
+        padding: 20px;
+      "
+    >
+      <img
+        src="{% static 'blog/css/cool.JPG' %}"
+        alt="Kushal"
+        style="
+          border-radius: 50%;
+          width: 150px;
+          height: 150px;
+          margin-bottom: 20px;
+          transition: transform 0.2s;
+        "
+      />
+      <h3 style="font-size: 1.5em; font-weight: bold; margin-bottom: 10px">
+        Kushal
+      </h3>
+      <p style="font-size: 1.2em; line-height: 1.5em">
+        Kushal is a highly skilled and experienced professional with a proven
+        track record of success. He brings a wealth of knowledge and expertise
+        to our team and is dedicated to delivering exceptional results.
+      </p>
+    </div>
+    <div
+      style="
+        text-align: center;
+        flex: 1;
+        margin: 20px;
+        border: 1px solid lightgray;
+        padding: 20px;
+      "
+    >
+      <img
+        src="{% static 'blog/css/aryan.jpeg' %}"
+        alt="Aryan"
+        style="
+          border-radius: 50%;
+          width: 150px;
+          height: 150px;
+          margin-bottom: 20px;
+          transition: transform 0.2s;
+        "
+      />
+      <h3 style="font-size: 1.5em; font-weight: bold; margin-bottom: 10px">
+        Aryan
+      </h3>
+      <p style="font-size: 1.2em; line-height: 1.5em">
+        Aryan is a creative and innovative thinker who always goes above and
+        beyond to exceed expectations. He brings a fresh perspective and new
+        ideas to our team, and is dedicated to delivering outstanding results.
+      </p>
+    </div>
+    <div
+      style="
+        text-align: center;
+        flex: 1;
+        margin: 20px;
+        border: 1px solid lightgray;
+        padding: 20px;
+      "
+    >
+      <img
+        src="{% static 'blog/css/bishwas.JPG' %}"
+        alt="Bishwas"
+        style="
+          border-radius: 50%;
+          width: 150px;
+          height: 150px;
+          margin-bottom: 20px;
+          transition: transform 0.2s;
+        "
+      />
+      <h3 style="font-size: 1.5em; font-weight: bold; margin-bottom: 10px">
+        Bishwas
+      </h3>
+      <p style="font-size: 1.2em; line-height: 1.5em">
+        Bishwas is a highly motivated and dedicated individual who is committed
+        to delivering the best possible outcomes. He brings a wealth of
+        experience and expertise to our team, and is dedicated to achieving
+        success.
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

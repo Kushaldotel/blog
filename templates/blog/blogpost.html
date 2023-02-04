@@ -1,0 +1,52 @@
+{% extends 'blog/base.html' %}
+{% block body %}
+<div class="container">
+<h1 class="my-3">
+    {{blog.title}}
+</h1>
+<div class="my-3">
+    {{blog.content|safe}}
+</div>
+
+<div class="container">
+        <h4 >Comments on this Post</h4>
+        {% for comment in comments reversed %}
+        <div style="margin-top: 10px; padding: 10px; border: 1px solid lightgray;">
+        <p style="margin-bottom: 0;">
+        {{comment.name}} commented {{comment.Comment}}
+        </p>
+        </div>
+        {% endfor %}
+    
+    <br>
+    <h2>
+        Please Leave a comment below
+    </h2>
+    <p>Wisely insert a comment you cannot edit once posted</p>
+    <br>
+    <form action="{% url 'postcomment' %}" method="post">
+        {% csrf_token %}
+
+        <div class="form-group" style="width: 80%;">
+            <label for="comment" style="font-weight: bold;">Name</label>
+            <input class="form-control" name="name" id="comment" style="margin-bottom: 10px;"/>
+        </div>
+    
+        <div class="form-group" style="width: 80%;">
+            <label for="comment" style="font-weight: bold;">email</label>
+            <input class="form-control" name="email" id="comment" type="email" style="margin-bottom: 10px;"/>
+        </div>
+
+        <div class="form-group" style="width: 80%;">
+            <label for="comment" style="font-weight: bold;">Comment</label>
+            <textarea class="form-control" name="comment" id="comment" rows="3" style="margin-bottom: 10px;"></textarea>
+        </div>
+    
+        <input type="hidden" name="post_id" value="{{blog.slug}}" style="margin-bottom: 10px;">
+    
+        <button type="submit" class="btn btn-primary" style="padding: 10px 20px;">Submit</button>
+    
+    
+    </form>
+</div>
+{% endblock body %}
