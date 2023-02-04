@@ -34,6 +34,7 @@ SECRET_KEY = 'django-insecure-soc7yz5)k+^wj-u%e^xy+g0nr0r5mj(d92&w-ed!m2xrawe)23
 DEBUG = getenv("IS_DEVELOPMENT", True)
 print(getenv("APP_HOST"))
 ALLOWED_HOSTS = [
+    "13.235.8.87"
     # getenv("APP_HOST")
 ]
 
@@ -128,14 +129,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / "static"
 
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = ["static/"]
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     # os.path.join(BASE_DIR, "static"),
-    BASE_DIR/'static',
+    BASE_DIR/'staticfiles',
 ]
 
 
